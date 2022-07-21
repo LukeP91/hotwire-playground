@@ -1,0 +1,12 @@
+<h1>Editing manual investment</h1>
+
+<%= turbo_frame_tag "manual_investments_#{@manual_investment.id}" do %>
+  <%= render "form", manual_investment: @manual_investment %>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Show this manual investment", @manual_investment %> |
+  <%= link_to "Back to manual investments", manual_investments_path %>
+</div>

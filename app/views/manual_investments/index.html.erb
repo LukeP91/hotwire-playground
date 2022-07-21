@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Manual investments</h1>
+
+<%= turbo_frame_tag "manual_investments" do %>
+  <div id="manual_investments">
+    <% @manual_investments.each do |manual_investment| %>
+      <%= turbo_frame_tag "manual_investments_#{manual_investment.id}" do %>
+        <%= render manual_investment %>
+        <%= link_to "Edit", edit_manual_investment_path(manual_investment) %>
+      <% end %>
+    <% end %>
+  </div>
+  <%= link_to "New manual investment", new_manual_investment_path %>
+<% end %>
+

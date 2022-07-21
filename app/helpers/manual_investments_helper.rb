@@ -1,0 +1,2 @@
+module ManualInvestmentsHelper
+end

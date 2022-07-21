@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @manual_investment %>
+
+<div>
+  <%= link_to "Edit this manual investment", edit_manual_investment_path(@manual_investment) %> |
+  <%= link_to "Back to manual investments", manual_investments_path %>
+
+  <%= button_to "Destroy this manual investment", @manual_investment, method: :delete %>
+</div>

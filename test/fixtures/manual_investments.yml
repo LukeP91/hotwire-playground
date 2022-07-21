@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bought_at: 2022-07-21
+  value: 9.99
+  investment_name: MyString
+
+two:
+  bought_at: 2022-07-21
+  value: 9.99
+  investment_name: MyString
