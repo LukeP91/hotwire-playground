@@ -3,7 +3,7 @@ class ManualInvestmentsController < ApplicationController
 
   # GET /manual_investments or /manual_investments.json
   def index
-    @manual_investments = ManualInvestment.all
+    @manual_investments = ManualInvestment.order(bought_at: :desc)
   end
 
   # GET /manual_investments/1 or /manual_investments/1.json

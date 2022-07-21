@@ -1,17 +1,19 @@
-<div id="<%= dom_id manual_investment %>">
-  <p>
-    <strong>Bought at:</strong>
-    <%= manual_investment.bought_at %>
-  </p>
+<%= turbo_frame_tag "manual_investments_#{manual_investment.id}" do %>
+  <div id="<%= dom_id manual_investment %>">
+    <p>
+      <strong>Bought at:</strong>
+      <%= manual_investment.bought_at %>
+    </p>
 
-  <p>
-    <strong>Value:</strong>
-    <%= manual_investment.value %>
-  </p>
+    <p>
+      <strong>Value:</strong>
+      <%= manual_investment.value %>
+    </p>
 
-  <p>
-    <strong>Investment name:</strong>
-    <%= manual_investment.investment_name %>
-  </p>
-
-</div>
+    <p>
+      <strong>Investment name:</strong>
+      <%= manual_investment.investment_name %>
+    </p>
+  </div>
+  <%= link_to "Edit", edit_manual_investment_path(manual_investment) %>
+<% end %>

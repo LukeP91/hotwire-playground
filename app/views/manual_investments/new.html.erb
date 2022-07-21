@@ -1,6 +1,6 @@
 <h1>New manual investment</h1>
 
-<%= turbo_frame_tag "manual_investments" do %>
+<%= turbo_frame_tag "new_manual_investment", target: '_top' do %>
   <%= render "form", manual_investment: @manual_investment %>
 <% end %>
 
