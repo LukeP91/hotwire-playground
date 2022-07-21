@@ -25,6 +25,7 @@ class ManualInvestmentsController < ApplicationController
 
     respond_to do |format|
       if @manual_investment.save
+        format.turbo_stream
         format.html { redirect_to manual_investments_url, notice: "Manual investment was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
