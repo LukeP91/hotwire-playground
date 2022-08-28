@@ -1,5 +1,5 @@
 <%= turbo_frame_tag "manual_investments_#{manual_investment.id}" do %>
-  <div id="<%= dom_id manual_investment %>">
+  <div data-sort-code=<%= manual_investment.bought_at %>>
     <p>
       <strong>Bought at:</strong>
       <%= manual_investment.bought_at %>
@@ -14,6 +14,6 @@
       <strong>Investment name:</strong>
       <%= manual_investment.investment_name %>
     </p>
+    <%= link_to "Edit", edit_manual_investment_path(manual_investment) %>
   </div>
-  <%= link_to "Edit", edit_manual_investment_path(manual_investment) %>
 <% end %>

@@ -4,6 +4,7 @@ class ManualInvestmentsController < ApplicationController
   # GET /manual_investments or /manual_investments.json
   def index
     @manual_investments = ManualInvestment.order(bought_at: :desc)
+    @count = ManualInvestment.count
   end
 
   # GET /manual_investments/1 or /manual_investments/1.json

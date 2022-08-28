@@ -1,1 +1,2 @@
 <%= turbo_stream.append "manual_investments", @manual_investment %>
+<%= turbo_stream.update "manual_investments_count", ManualInvestment.count %>

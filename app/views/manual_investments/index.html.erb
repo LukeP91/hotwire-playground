@@ -2,14 +2,16 @@
 
 <h1>Manual investments</h1>
 
-<%= turbo_frame_tag "manual_investments" do %>
-  <div id="manual_investments">
-    <% @manual_investments.each do |manual_investment| %>
-      <%= turbo_frame_tag "manual_investments_#{manual_investment.id}" do %>
-        <%= render manual_investment %>
-      <% end %>
-    <% end %>
-  </div>
-<% end %>
-
 <%= turbo_frame_tag "new_manual_investment", src: new_manual_investment_path, target: '_top' %>
+
+  <p>Manual investments: 
+  <%= turbo_frame_tag "manual_investments_count" do %>
+    <%= @count %>
+  <% end %>
+</p>
+
+<%= turbo_frame_tag "manual_investments", data: { controller: "manual-investments" } do %>
+  <% @manual_investments.each do |manual_investment| %>
+    <%= render manual_investment %>
+  <% end %>
+<% end %>
